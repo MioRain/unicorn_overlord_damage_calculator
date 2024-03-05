@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聖獸之王 傷害計算機</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="countdown"></h1>
+    <h2 class="title">聖獸之王 傷害計算機</h2>
+    <div class="block">
+      <h2>角色A</h2>
+      <div class="input-group">
+        <label for="phyAtkA">物理攻擊</label>
+        <input type="number" id="phyAtkA" value="0">
+      </div>
+      <div class="input-group">
+        <label for="phyDefA">物理防禦</label>
+        <input type="number" id="phyDefA" value="0">
+      </div>
+      <div class="input-group">
+        <label for="phySkillDamA">物理技能傷害</label>
+        <input type="number" id="phySkillDamA" value="100">
+      </div>
+      <div class="input-group">
+        <label for="magAtkA">魔法攻擊</label>
+        <input type="number" id="magAtkA" value="0">
+      </div>
+      <div class="input-group">
+        <label for="magDefA">魔法防禦</label>
+        <input type="number" id="magDefA" value="0">
+      </div>
+      <div class="input-group">
+        <label for="magSkillDamA">魔法技能傷害</label>
+        <input type="number" id="magSkillDamA" value="100">
+      </div>
+      <div class="input-group">
+        <label for="hitRateA">命中</label>
+        <input type="number" id="hitRateA" value="0">
+      </div>
+      <div class="input-group">
+        <label for="hitMultiplierA">技能命中倍率</label>
+        <input type="number" id="hitMultiplierA" value="1">
+      </div>
+      <div class="input-group">
+        <label for="critMultiplierA">爆擊傷害倍率</label>
+        <input type="number" id="critMultiplierA" value="1.5">
+      </div>
+      <div class="input-group">
+        <label for="evasionA">迴避</label>
+        <input type="number" id="evasionA" value="0">
+      </div>
+      <div class="input-group">
+        <label for="blockTypeA">格擋</label>
+        <select id="blockTypeA">
+          <option value="small">小</option>
+          <option value="medium">中</option>
+          <option value="large">大</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>角色B</h2>
+      <!-- Repeat same input fields for character B -->
+      <div class="input-group">
+        <label for="phyAtkB">物理攻擊</label>
+        <input type="number" id="phyAtkB" value="0">
+      </div>
+      <div class="input-group">
+        <label for="phyDefB">物理防禦</label>
+        <input type="number" id="phyDefB" value="0">
+      </div>
+      <div class="input-group">
+        <label for="phySkillDamB">物理技能傷害</label>
+        <input type="number" id="phySkillDamB" value="100">
+      </div>
+      <div class="input-group">
+        <label for="magAtkB">魔法攻擊</label>
+        <input type="number" id="magAtkB" value="0">
+      </div>
+      <div class="input-group">
+        <label for="magDefB">魔法防禦</label>
+        <input type="number" id="magDefB" value="0">
+      </div>
+      <div class="input-group">
+        <label for="magSkillDamB">魔法技能傷害</label>
+        <input type="number" id="magSkillDamB" value="100">
+      </div>
+      <div class="input-group">
+        <label for="hitRateB">命中</label>
+        <input type="number" id="hitRateB" value="0">
+      </div>
+      <div class="input-group">
+        <label for="hitMultiplierB">技能命中倍率</label>
+        <input type="number" id="hitMultiplierB" value="1">
+      </div>
+      <div class="input-group">
+        <label for="critMultiplierB">爆擊傷害倍率</label>
+        <input type="number" id="critMultiplierB" value="1.5">
+      </div>
+      <div class="input-group">
+        <label for="evasionB">迴避</label>
+        <input type="number" id="evasionB" value="0">
+      </div>
+      <div class="input-group">
+        <label for="blockTypeB">格擋</label>
+        <select id="blockTypeB">
+          <option value="small">小</option>
+          <option value="medium">中</option>
+          <option value="large">大</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="simulateButton">模擬計算</button>
+
+    <div class="block result">
+      <div id="resultA"></div>
+    </div>
+
+    <div class="block result">
+      <div id="resultB"></div>
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+  <script src="timer.js"></script>
+
+</body>
+
+</html>
