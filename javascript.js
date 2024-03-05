@@ -94,7 +94,7 @@ function calculateBlockDamage(phyDamage, phyDefense, phySkillDam, magDamage, mag
   }
   totalPhyDamage = (phyDamage - phyDefense) * (phySkillDam / 100);
   totalMagDamage = (magDamage - magDefense) * (magSkillDam / 100);
-  var totalDamage = (totalPhyDamage < 0 ? 0 : totalPhyDamage * (1 - reduction) + totalMagDamage < 0 ? 0 : totalMagDamage);
+  var totalDamage = ((totalPhyDamage < 0 ? 0 : totalPhyDamage) * (1 - reduction) + (totalMagDamage < 0 ? 0 : totalMagDamage));
 
   return totalDamage;
 }
